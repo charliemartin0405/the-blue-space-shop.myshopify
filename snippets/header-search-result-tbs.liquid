@@ -1,0 +1,21 @@
+<h1>Search Results for "{{ search.terms }}"</h1>
+
+{% if search.results_count > 0 %}
+  <ul>
+    {% for item in search.results %}
+      <li>
+        <a href="{{ item.url }}">
+          {% if item.object_type == 'product' and item.featured_image %}
+            <img src="{{ item.featured_image | img_url: 'thumb' }}" alt="{{ item.title }}" />
+          {% endif %}
+          {{ item.title }}
+        </a>
+        {% if item.content %}
+          <p>{{ item.content | truncate: 100 }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No results found for "{{ search.terms }}".</p>
+{% endif %}

@@ -1,0 +1,17 @@
+.tbs__sidebar-menu {
+  background-color: #3b4d64;
+}
+.tbs__sidebar-menu nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.tbs__sidebar-menu nav ul li {
+  padding: 0.5em;
+  margin: 0 0.5em;
+}
+.tbs__sidebar-menu nav a {
+  color: #fff;
+  text-decoration: none;
+}

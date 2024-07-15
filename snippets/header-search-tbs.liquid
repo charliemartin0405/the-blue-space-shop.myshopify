@@ -1,0 +1,14 @@
+{% comment %}
+  Renders a header search modal. Should be used with 'header.liquid'
+
+  Accepts:
+  - input_id: {String} Id for the search input element (required)
+
+  Usage:
+  {% render 'header-search-tbs', input_id: 'My-Id'%}
+{% endcomment %}
+
+<form action="/search" method="get" role="search">
+  <input type="search" name="q" placeholder="Search our store" aria-label="Search">
+  <button type="submit">Search</button>
+</form>
